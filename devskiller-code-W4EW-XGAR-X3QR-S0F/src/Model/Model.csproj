@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Entities\" />
+      <None Remove="Repository\" />
+      <None Remove="Business\" />
+      <None Remove="Business\Post\" />
+      <None Remove="Business\Comment\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Entities\" />
+      <Folder Include="Repository\" />
+      <Folder Include="Business\" />
+      <Folder Include="Business\Post\" />
+      <Folder Include="Business\Comment\" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\CrossCutting\CrossCutting.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
+    </ItemGroup>
+</Project>
